@@ -2,6 +2,7 @@ package com.luther.lambda;
 
 import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 /**
  * @Author: cpzh（不器）
@@ -35,5 +36,9 @@ public class Demo {
         function.andThen(function2).apply(person);
         System.out.println(couple.getHusbandName());
         System.out.println(couple.getWifeName());
+        Supplier<String> supplier = ()->{
+            return "abc";
+        };
+        ThreadLocal.withInitial(supplier);
     }
 }
