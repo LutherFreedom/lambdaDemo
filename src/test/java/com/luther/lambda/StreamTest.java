@@ -65,5 +65,9 @@ public class StreamTest {
             return acc < ele ? ele : acc;
         });
         System.out.println(max);
+
+
+         count = Stream.of(1, 2, 3, 4).reduce( (acc, ele) -> acc + ele).get();
+        System.out.println(count);
     }
 }
